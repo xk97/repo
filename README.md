@@ -4,3 +4,4 @@ Several machine learning projects
   Oil and gas public data study using regression, clustering, mapping  
   Ticket fine model to classify ticket based on probability of getting paid  
   Test Keras and tree model, tree visualization using Graphviz  
+  Test keras multi-classification, regression with TensorFlow backend  
