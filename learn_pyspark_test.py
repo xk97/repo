@@ -58,3 +58,11 @@ print(train_prediction.r2, train_prediction.meanAbsoluteError)
 
 test_prediction = lr_model.evaluate(df_test)
 print(test_prediction.r2, test_prediction.meanAbsoluteError)
+
+
+#%%
+from pyspark import SparkContext
+from pyspark.sql import SQLContext
+sc = SparkContext()
+sc.parallelize([3, 4, 5]).map(lambda x: range(1, x)).collect()
+sc.parallelize([3, 4, 5]).flatMap(lambda x: range(1, x)).collect()
