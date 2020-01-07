@@ -63,6 +63,13 @@ print(test_prediction.r2, test_prediction.meanAbsoluteError)
 #%%
 from pyspark import SparkContext
 from pyspark.sql import SQLContext
+from pyspark.sql import Row
 sc = SparkContext()
-sc.parallelize([3, 4, 5]).map(lambda x: range(1, x)).collect()
-sc.parallelize([3, 4, 5]).flatMap(lambda x: range(1, x)).collect()
+print(sc.version)
+arr = sc.parallelize([3, 4, 5]).map(lambda x: range(1, x))
+arr.collect()
+arr2 = sc.parallelize(range(20)).flatMap(lambda x: (x % 2, x))
+arr2.collect()
+arr2.keys().collect()
+dff = spark.createDataFrame(arr2)
+dff.select(dff.columns[0]).distinct().show() 
