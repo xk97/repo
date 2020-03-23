@@ -49,5 +49,5 @@ FROM (
     SUM(amount) OVER ( PARTITION BY year_, week_) as city_week_total,
     SUM(amount) OVER ( PARTITION BY cityid, year_, week_ ) as city_week_one
     FROM city_transaction
-)
+) ct1
 ;
