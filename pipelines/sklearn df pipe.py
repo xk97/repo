@@ -1,4 +1,7 @@
-# https://ramhiser.com/post/2018-04-16-building-scikit-learn-pipeline-with-pandas-dataframe/
+"""
+https://ramhiser.com/post/2018-04-16-building-scikit-learn-pipeline-with-pandas-dataframe/
+https://github.com/BigDataRepublic/bdr-analytics-py/blob/master/bdranalytics/sklearn/encoders.py
+"""
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.pipeline import make_pipeline, FeatureUnion, Pipeline
