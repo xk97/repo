@@ -6,7 +6,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.pipeline import make_pipeline, FeatureUnion, Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.impute import Imputer
+from sklearn.impute import SimpleImputer 
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import roc_curve, roc_auc_score
 from sklearn.svm import SVC
@@ -118,17 +118,17 @@ preprocess_pipeline = make_pipeline(
     FeatureUnion(transformer_list=[
         ("numeric_features", make_pipeline(
             TypeSelector(np.number),
-            Imputer(strategy="median"),
+            SimpleImputer(strategy="median"),
             StandardScaler()
         )),
         ("categorical_features", make_pipeline(
             TypeSelector("category"),
-            Imputer(strategy="most_frequent"),
+            SimpleImputer(strategy="most_frequent"),
             OneHotEncoder()
         )),
         ("boolean_features", make_pipeline(
             TypeSelector("bool"),
-            Imputer(strategy="most_frequent")
+            SimpleImputer(strategy="most_frequent")
         ))
     ])
 )
