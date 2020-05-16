@@ -36,7 +36,7 @@ def run_exe(*args):
 
 if __name__ == "__main__":
     import sys
-    argv = sys.argv[1:]
+    argv = sys.argv[1:] or ['run_exe']
     print(argv)
     if 'run_exe' in argv:
         run_exe(*argv[1:])
