@@ -50,4 +50,13 @@ def get_params():
 
 
 if __name__ == "__main__":
-    print(get_params())
+    args = get_params()
+    print(args)
+    try:
+        import IPython
+        print( "Suggestions:\n")
+        # print("%%timeit get_params(%d, '%s')" % (i, s))
+        print(args)
+        IPython.embed()
+    except:
+        pass
