@@ -1,6 +1,8 @@
 mlproj
 ==============================
 
+python setup.py bdist_wheel -d dist
+
 ML project with cookiecutter
 
 Project Organization
