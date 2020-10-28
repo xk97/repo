@@ -9,3 +9,4 @@ def test_01(fix):
     docstring
     """
     pass
+    assert fix
