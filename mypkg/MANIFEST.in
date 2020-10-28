@@ -1,0 +1,2 @@
+include src/mypkg/non_py *
+global-exclude .py[ocd], __pycache__

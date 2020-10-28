@@ -12,7 +12,10 @@ def get_params():
     parser = argparse.ArgumentParser()
 
     # data hyperparams
+    parser.add_argument("inputs", action='store', nargs='*', help='help 10')
     parser.add_argument("--input_size", type=int, default=10)
+    parser.add_argument("--refit", action='store_true')
+    parser.add_argument("-d", action='store_true')
 
     parser.add_argument("--framework", type=str, default="sklearn")
     parser.add_argument("--keras_model", type=str, default="dense")

@@ -1,7 +1,9 @@
 #importing module 
 import logging 
+from pathlib import Path
   
 #Create and configure logger 
+print(Path(__file__).parent)
 logging.basicConfig(filename="newfile.log", 
                     format='%(asctime)s %(message)s', 
                     filemode='w') 
