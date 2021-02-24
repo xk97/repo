@@ -1,3 +1,5 @@
+from pkg_resources import resource_string
+
 class Pkg(object):
     def __init__(self, name=None):
         self.name = name
@@ -19,3 +21,4 @@ if __name__ == "__main__":
     m = Pkg()
     m()
     print(m.__version__)
+    print(resource_string(__name__, 'non_py/query.sql'))

@@ -13,6 +13,11 @@ setup(
     name='mypkg',
     packages=find_packages('src'),
     package_dir={'': 'src'},
+    include_package_data=True,
+    package_data={
+        '' : ['*.sql'],
+        '' : ['*.yml'],
+    },
     version=__version__,
     description='ML project with cookiecutter',
     author='xk97',
